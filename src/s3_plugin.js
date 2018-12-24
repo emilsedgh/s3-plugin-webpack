@@ -184,7 +184,7 @@ module.exports = class S3Plugin {
     // Add |css to regex - Add when cdnize css is done
     const [cdnizeFiles, otherFiles] = _(allHtml)
       .uniq('name')
-      .partition((file) => /\.(html)/.test(file.name))
+      .partition((file) => /\.(html|css)/.test(file.name))
       .value()
 
     return Promise.all(cdnizeFiles.map(file => this.cdnizeHtml(file)).concat(otherFiles))
