@@ -304,7 +304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // Add |css to regex - Add when cdnize css is done
 
 	      var _$uniq$partition$valu = (0, _lodash2.default)(allHtml).uniq('name').partition(function (file) {
-	        return (/\.(html)/.test(file.name)
+	        return (/\.(html|css)/.test(file.name)
 	        );
 	      }).value(),
 	          _$uniq$partition$valu2 = _slicedToArray(_$uniq$partition$valu, 2),
