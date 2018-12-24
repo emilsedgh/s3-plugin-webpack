@@ -178,7 +178,7 @@ module.exports = class S3Plugin {
     else
       allHtml = files
 
-    this.cdnizerOptions.files = allHtml.map(({name}) => `*${name}*`)
+    this.cdnizerOptions.files = allHtml.map(({name}) => `{/,}*${name}*`)
     this.cdnizer = cdnizer(this.cdnizerOptions)
 
     // Add |css to regex - Add when cdnize css is done
